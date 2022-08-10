@@ -1,0 +1,10 @@
+<form method="POST" action="">
+    {% csrf_token %}
+    <fieldset>
+        Title:  <input type="text" name="title" /><br><br>
+        Blog body:  <input type="text" name="body" /><br><br>
+        <input type="submit" />
+    </fieldset>
+</form>
+
+<h3>click <a href="/login">here</a> to go back</h3>

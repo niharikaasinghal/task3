@@ -1,0 +1,22 @@
+{% if obj %}
+    <h1>Welcome,{{obj.user_type}} {{obj.username}}</h1>
+    <h3>Your details are-<br></h3>
+    <h3>{{obj.firstname}} {{obj.lastname}}</h3>
+    <h3>{{obj.email}}</h3>
+    <h3>{{obj.address}}</h3>
+    {% if obj.user == 'Doctor' %}
+        <h3>Click <a href="write">here</a> to write blog</h3>
+        <h3>Click <a href="blogs">here</a> to view blogs</h3>
+    {% elif obj.user == 'Patient' %}
+        <h3>Click <a href="blogs">here</a> to view blogs</h3>
+        <h3>Click <a href="doctors">here</a> to view list of doctors</h3>
+        <h3>Click <a href="book">here</a> to book an appointment</h3>
+    {% else %}
+        <h2>click <a href="login">here</a> to login</h2>
+        <h2>click <a href="register">here</a> to register</h2>
+    {% endif %}
+{% else %}
+    <h2>click <a href="login">here</a> to login</h2>
+    <h2>click <a href="register">here</a> to register</h2>
+{% endif %}
+

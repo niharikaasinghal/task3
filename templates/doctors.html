@@ -1,0 +1,7 @@
+<h3>List of doctors are</h3>
+{% for d in doctors %}
+{% if d.user == 'Doctor' %}
+<h3>{{d.firstname}} {{d.lastname}}</h3> 
+{% endif %}
+{% endfor %}
+<h3>Click <a href="login">here</a> to go back</h3>
